@@ -137,7 +137,7 @@ $(function() {
                 numberofwins.update({ p1: p1Wins, p2: p2Wins});
                 numberofloses.update({ p1: p1Losses, p2: p2Losses });
                 $('#p1LoseCountSpan').text(p1Losses);
-                $('#p2WinCountSpan').text(p2Wins);
+                $('#p2count').text(p2Wins);
                 $('#resultsPanel').find('h4').text(resultsin);
             }
             else if( player1choice == 'rock' && player2choice == 'scissors'){
@@ -147,7 +147,7 @@ $(function() {
                 numberofwins.update({ p1: p1Wins, p2: p2Wins});
                 numberofloses.update({ p1: p1Losses, p2: p2Losses });
                 $('#p1WinCountSpan').text(p1Wins);
-                $('#p2LoseCountSpan').text(p2Losses);
+                $('#p2countlose').text(p2Losses);
                 $('#resultsPanel').find('h4').text(resultsin);
             }
             else if( player1choice == 'paper' && player2choice == 'paper'){
@@ -161,7 +161,7 @@ $(function() {
                 numberofwins.update({ p1: p1Wins, p2: p2Wins });
                 numberofloses.update({ p1: p1Losses, p2: p2Losses });
                 $('#p1WinCountSpan').text(p1Wins);
-                $('#p2LoseCountSpan').text(p2Losses);
+                $('#p2countlose').text(p2Losses);
                 $('#resultsPanel').find('h4').text(resultsin);
             }
             else if( player1choice == 'paper' && player2choice == 'scissors'){
@@ -171,7 +171,7 @@ $(function() {
                 numberofwins.update({ p1: p1Wins, p2: p2Wins });
                 numberofloses.update({ p1: p1Losses, p2: p2Losses });
                 $('#p1LoseCountSpan').text(p1Losses);
-                $('#p2WinCountSpan').text(p2Wins);
+                $('#p2count').text(p2Wins);
                 $('#resultsPanel').find('h4').text(resultsin);
             }
             else if( player1choice == 'scissors' && player2choice == 'scissors'){
@@ -185,7 +185,7 @@ $(function() {
                 numberofwins.update({ p1: p1Wins, p2: p2Wins });
                 numberofloses.update({ p1: p1Losses, p2: p2Losses });
                 $('#p1LoseCountSpan').text(p1Losses);
-                $('#p2WinCountSpan').text(p2Wins);
+                $('#p2count').text(p2Wins);
                 $('#resultsPanel').find('h4').text(resultsin);
             }
             else if( player1choice == 'scissors' && player2choice == 'paper'){
@@ -201,7 +201,7 @@ $(function() {
         }
     });
 
-    $('#lego').on('click', playerName);
+    $('#startup').on('click', playerName);
   
 
 
