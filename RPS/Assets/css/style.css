@@ -5,6 +5,9 @@
 .newcontainer {
     Margin:20px auto;
 }
+.newcontainer h4 {
+    color:black;
+}
 #resultsPanel {
     Margin:20px auto;
     color:#fff;
