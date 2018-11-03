@@ -41,27 +41,32 @@ $(function() {
        console.log(whatresults);
        $('#resultsPanel').find('h4').text(whatresults);
 });
-// numberofwins.on('value', function check(snapper) { 
-//     couldyouwinP1= snapper.val().p1;
-//     couldyouwinP2= snapper.val().p2;
+numberofwins.on('value', function check(snapper) { 
+    couldyouwinP1= snapper.val().p1;
+    couldyouwinP2= snapper.val().p2;
     
-//     $('#p2WinCountSpan').text(couldyouwinP1);
+    // $('#p2WinCountSpan').text(couldyouwinP1);
    
-//     $('#p1WinCountSpan').text(couldyouwinP2);
-//     connections.onDisconnect().remove();
-//     console.log(couldyouwinP1);
-//     console.log(couldyouwinP2);
-// });
+    // $('#p1WinCountSpan').text(couldyouwinP2);
+    connections.onDisconnect().remove();
 
-// numberofloses.on('value', function check(snapp) { 
-//     couldyouloseP1= snapp.val().p1;
-//     couldyouloseP2= snapp.val().p2;
-//     $('#p1LoseCountSpan').text(couldyouloseP1);
-//     $('#p2LoseCountSpan').text(couldyouloseP2);
-//     connections.onDisconnect().remove();
-//     console.log(couldyouloseP1);
-//     console.log(couldyouloseP2);
-// });
+});
+
+numberofloses.on('value', function check(snapp) { 
+    couldyouloseP1= snapp.val().p1;
+    couldyouloseP2= snapp.val().p2;
+    // $('#p1LoseCountSpan').text(couldyouloseP1);
+    // $('#p2LoseCountSpan').text(couldyouloseP2);
+    connections.onDisconnect().remove();
+
+});
+
+function updatescore () {
+$('#p1LoseCountSpan').text(couldyouloseP1);
+$('#p2LoseCountSpan').text(couldyouloseP2); 
+$('#p2WinCountSpan').text(couldyouwinP2);   
+ $('#p1WinCountSpan').text(couldyouwinP1);
+}
 
     // Functions
     function playerName (){
@@ -158,6 +163,10 @@ $(function() {
 
             if( player1choice == 'rock' && player2choice == 'rock'){
                 resultsin.set('Tie');
+                console.log(couldyouloseP1);
+                console.log(couldyouloseP2);
+                console.log(couldyouwinP1);
+                console.log(couldyouwinP2);
                
             }
             else if( player1choice == 'rock' && player2choice == 'paper'){
@@ -167,6 +176,10 @@ $(function() {
                 p2Wins =p2Wins +1;
                 numberofwins.update({ p1: p1Wins, p2: p2Wins});
                 numberofloses.update({ p1: p1Losses, p2: p2Losses });
+                console.log(couldyouloseP1);
+                console.log(couldyouloseP2);
+                console.log(couldyouwinP1);
+                console.log(couldyouwinP2);
             }
             else if( player1choice == 'rock' && player2choice == 'scissors'){
                 resultsin.set('Player 1:' + ' '+nameofplay1+' '+'Won');
@@ -175,10 +188,18 @@ $(function() {
                 p1Wins= p1Wins +1;
                 numberofwins.update({ p1: p1Wins, p2: p2Wins});
                 numberofloses.update({ p1: p1Losses, p2: p2Losses });
+                console.log(couldyouloseP1);
+                console.log(couldyouloseP2);
+                console.log(couldyouwinP1);
+                console.log(couldyouwinP2);
 
             }
             else if( player1choice == 'paper' && player2choice == 'paper'){
                 resultsin.set('Tie');
+                console.log(couldyouloseP1);
+                console.log(couldyouloseP2);
+                console.log(couldyouwinP1);
+                console.log(couldyouwinP2);
 
             }
             else if( player1choice == 'paper' && player2choice == 'rock'){
@@ -188,6 +209,10 @@ $(function() {
                 p1Wins =p1Wins +1;
                 numberofwins.update({ p1: p1Wins, p2: p2Wins });
                 numberofloses.update({ p1: p1Losses, p2: p2Losses });
+                console.log(couldyouloseP1);
+                console.log(couldyouloseP2);
+                console.log(couldyouwinP1);
+                console.log(couldyouwinP2);
 
             }
             else if( player1choice == 'paper' && player2choice == 'scissors'){
@@ -197,9 +222,17 @@ $(function() {
                 p2Wins =p2Wins +1;
                 numberofwins.update({ p1: p1Wins, p2: p2Wins });
                 numberofloses.update({ p1: p1Losses, p2: p2Losses });
+                console.log(couldyouloseP1);
+                console.log(couldyouloseP2);
+                console.log(couldyouwinP1);
+                console.log(couldyouwinP2);
             }
             else if( player1choice == 'scissors' && player2choice == 'scissors'){
                 resultsin.update('Tie');
+                console.log(couldyouloseP1);
+                console.log(couldyouloseP2);
+                console.log(couldyouwinP1);
+                console.log(couldyouwinP2);
 
 
             }
@@ -210,6 +243,10 @@ $(function() {
                 p2Wins =p2Wins+1;
                 numberofwins.update({ p1: p1Wins, p2: p2Wins });
                 numberofloses.update({ p1: p1Losses, p2: p2Losses });
+                console.log(couldyouloseP1);
+                console.log(couldyouloseP2);
+                console.log(couldyouwinP1);
+                console.log(couldyouwinP2);
 
             }
             else if( player1choice == 'scissors' && player2choice == 'paper'){
@@ -220,9 +257,14 @@ $(function() {
                 
                 numberofwins.update({ p1: p1Wins, p2: p2Wins });
                 numberofloses.update({ p1: p1Losses, p2: p2Losses });
+                console.log(couldyouloseP1);
+                console.log(couldyouloseP2);
+                console.log(couldyouwinP1);
+                console.log(couldyouwinP2);
 
             }
         }
+        updatescore();
     });
 
     $('#startup').on('click', playerName);
